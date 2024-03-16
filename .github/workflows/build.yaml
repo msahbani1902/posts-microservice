@@ -1,4 +1,4 @@
-name: Build and Test App
+name: MSA Workflow Name - Build and Test App - posts
 on:
   push:
     branches: [ main ]
