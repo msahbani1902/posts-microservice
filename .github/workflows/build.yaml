@@ -11,10 +11,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Login to Docker Hub
       id: login
-      run: docker login -u ${{ variables.DOCKER_USER  }} -p ${{ secrets.DOCKER_PASSWORD }}
+      run: docker login -u $DOCKER_USER -p ${{ secrets.DOCKER_PASSWORD }}
     - name: Build the Docker image
       id: build
-      run: docker build . --file Dockerfile --tag ${{ variables.DOCKER_USER  }}/toto
+      run: docker build . --file Dockerfile --tag $DOCKER_USER/toto
     - name: Push the Docker image
       id: push
-      run: docker push ${{ variables.DOCKER_USER  }}/toto
+      run: docker push $variables.DOCKER_USER/toto
