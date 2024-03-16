@@ -6,3 +6,4 @@ Repo for the posts microservice
 -----------
 -----------
 -----------
+-----------
